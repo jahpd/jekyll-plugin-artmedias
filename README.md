@@ -36,7 +36,7 @@ notes C-D-E/4 #0# =:: C-D-E-F/4 =|=
 - Processing.js with <canvas> tags: for create interactive sketchs!
 
 ```
-{% processing foo %}
+{% p5 foo %}
 int i = 0; 
 void setup() {
    size(800, 800);
@@ -54,7 +54,7 @@ void draw() {
     i = 0; 
   }
 }
-{% endprocessing %}
+{% endp5 %}
 ```
 
 Future:
