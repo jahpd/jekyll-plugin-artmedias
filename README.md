@@ -35,6 +35,10 @@ notes C-D-E/4 #0# =:: C-D-E-F/4 =|=
 
 - [P5.js](p5js.org/) with render.js: for create interactive sketchs!
 
+First write this line. This load all scripts
+
+    {% p5load %}
+
 A single static sketch:
 
 ```
@@ -47,7 +51,7 @@ line(i, 0, random(0, width), height);
 {% endp5 %}
 ```
 
-A dynamic sketch:
+Or dynamic sketch:
 
 ```
 {% p5 foo %}
@@ -69,6 +73,10 @@ function draw(){
 }	
 {% endp5 %}
 ```
+
+Then do this
+
+    {% p5run %}
 
 # TODO
 
