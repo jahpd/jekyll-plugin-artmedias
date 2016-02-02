@@ -1,4 +1,4 @@
-# Jekkyl-media-plugins
+# Jekyll-media-plugins
 
 These are personal plugins i created to use in my projects:
 
