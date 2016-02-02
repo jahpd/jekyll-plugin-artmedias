@@ -36,7 +36,7 @@ module Jekyll
     end
  
     def render(context)
-      "<iframe width=\"#{@width}\" height=\"#{@height}\" src=\"http://www.youtube.com/embed/#{@id}?color=white&amp;theme=light\">&nbsp;</iframe>"
+      "<iframe width=\"#{@width}\" height=\"#{@height}\" src=\"https://www.youtube.com/embed/#{@id}?color=white&amp;theme=light\">&nbsp;</iframe>"
     end
   end
 

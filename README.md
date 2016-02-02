@@ -20,7 +20,7 @@ These are personal plugins i created to use in my projects:
 {% midi /mymidi.mid %}
 ```
 
-  - Vexflow <canvas> tags for create music
+  - [Vexflow](https://github.com/0xfe/vexflow) <canvas> tags for create music
     staffs: add code!
 
 ```
@@ -33,34 +33,51 @@ notes C-D-E/4 #0# =:: C-D-E-F/4 =|=
 {% endvexflow %}
 ```
 
-- Processing.js with <canvas> tags: for create interactive sketchs!
+- [P5.js](p5js.org/) with render.js: for create interactive sketchs!
+
+A single static sketch:
 
 ```
 {% p5 foo %}
-int i = 0; 
-void setup() {
-   size(800, 800);
-   background(255);
-   smooth();
-   strokeWeight(15);
-   frameRate(24);
-} 
-void draw() {
-  stroke(random(255), random(255), random(255), 100);
-  line(i, 0, random(0, width), height);
-  if (i <= width) {
-    i++;
-  } else {
-    i = 0; 
-  }
-}
+createCanvas(400, 400 );
+background(255);
+smooth();
+stroke(random(255), random(255), random(255), 100);
+line(i, 0, random(0, width), height);
 {% endp5 %}
 ```
 
-Future:
+A dynamic sketch:
+
+```
+{% p5 foo %}
+function setup(){
+  createCanvas(400, 400 );
+}
+
+function draw(){
+  background(255);
+  smooth();
+  stroke(random(255), random(255), random(255), 100);
+  line(i, 0, random(0, width), height);
+  if(i>=width){
+    i++;
+  }
+  else{
+    i--;
+  }
+}	
+{% endp5 %}
+```
+
+# TODO
 
   - Vimeo
   - <audio> tags
   - Soundcloud
   - Freesound
   - Wikimedia images
+  - Audio Synthesis:
+    - wavepotruntime
+    - termpot.js
+    - Gibber
