@@ -76,7 +76,20 @@ function draw(){
 
 Then do this
 
-    {% p5run %}
+{% p5run %}
+
+- [Wavepot](http://wavepot.com/): sound synthesis with HTML5.
+
+```
+{% wavepotload %}
+
+{% wavepot foo %}
+function dsp(){
+  return noise(sin(0.001));
+}
+{% endwavepot %}
+```
+
 
 # TODO
 
@@ -86,6 +99,4 @@ Then do this
   - Freesound
   - Wikimedia images
   - Audio Synthesis:
-    - wavepotruntime
-    - termpot.js
     - Gibber
